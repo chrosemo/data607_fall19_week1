@@ -1,2 +1,4 @@
 # data607_fall19_week1
-A repository containing files from Week 1 of CUNY MSDS Data 607 - Fall 2019
+This repository contains files from Week 1 of CUNY MSDS Data 607 - Fall 2019.
+Created: 082919
+Last updated: 082919
