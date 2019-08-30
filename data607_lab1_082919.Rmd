@@ -1,0 +1,36 @@
+---
+title: "Data 607 - Hands-on Lab 1 - 082919"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Read in comma-delimited file as a data frame
+
+Upon downloading the bridges.data.version2 comma-delimited file and uploading it to github, I read the raw file into R as a data frame called bridges. I then check its top six rows.
+
+```{r bridges.data 1}
+bridges <- read.csv("https://raw.githubusercontent.com/chrosemo/test/master/bridges.data.version2", header = FALSE)
+head(bridges)
+```
+
+## Update the data frame with appropriate column names
+
+I update the column names of bridges to reflect the names noted in the bridges.Names file and again check the top six rows.
+
+```{r bridges.data 2}
+colnames(bridges) <- c("identifier", "river", "location", "erected", "purpose", "length", "lanes", "clear_g", "t_or_d", "material", "span", "rel_l", "type")
+head(bridges)
+```
+
+## Subset the data frame
+
+Lastly, I subset the data frame, creating a new one that keeps four columns. I then check the new data frame's bottom six rows.
+
+```{r bridges.data 3}
+bridges_working <- bridges[c("identifier", "river", "material", "span")]
+tail(bridges_working)
+```
+
